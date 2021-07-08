@@ -35,3 +35,4 @@ jobs:
           heroku_email: "logical@ngs.ru"
           healthcheck: "https://dmnalex-pokedex.herokuapp.com/health"
           checkstring: "ok"
+          rollbackonhealthcheckfailed: true
