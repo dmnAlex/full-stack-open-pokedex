@@ -28,5 +28,5 @@ jobs:
         run: echo "$TEST"
       - name: test2
         if: ${{ github.event_name == 'push' && contains(join(github.event.commits.*.message, ' '), '#skip') }}
-        run: echo "it works!"
+        run: echo "#skip is detected"
       
