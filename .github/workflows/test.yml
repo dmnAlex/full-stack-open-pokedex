@@ -1,0 +1,14 @@
+name: Test workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test_job:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: echo test
+        run: echo "Test!"
