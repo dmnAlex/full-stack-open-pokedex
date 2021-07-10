@@ -22,7 +22,7 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       - name: deployment notification
-        if: ${{ steps.deploy_step.conclusion === 'success' }}
+        if: ${{ steps.deploy_step.conclusion == 'success' }}
         uses: 8398a7/action-slack@v3
         with:
           status: custom
